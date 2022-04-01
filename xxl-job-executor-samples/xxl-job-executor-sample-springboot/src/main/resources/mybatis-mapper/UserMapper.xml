@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxl.job.executor.user.dao.UserDao">
+    <insert id="createUser">
+        insert into user(uuid, name, age, gender) values (#{user.uuid}, #{user.name}, #{user.age}, #{user.gender})
+    </insert>
+    <select id="getUserById" resultType="com.xxl.job.executor.user.vo.UserVO">
+        select * from user where uuid = #{id}
+    </select>
+</mapper>
