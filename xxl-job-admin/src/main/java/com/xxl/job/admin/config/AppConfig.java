@@ -25,6 +25,10 @@ public class AppConfig {
         return new ApolloJavaConfigBean();
     }
 
+    /**
+     * 配置修改监听器
+     * @param configChangeEvent 监听事件参数， 可通过该参数获取namespace，keys等信息
+     */
     @ApolloConfigChangeListener
     private void onChange(ConfigChangeEvent configChangeEvent) {
         System.out.println("Changes for namespace " + configChangeEvent.getNamespace());
